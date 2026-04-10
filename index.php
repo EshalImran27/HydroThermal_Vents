@@ -5,7 +5,6 @@
  *
  * SET08101 Web Technologies Coursework Starter Code
  */
-
 require_once 'includes/db.php';
 
 $pageTitle = 'All Vents';
