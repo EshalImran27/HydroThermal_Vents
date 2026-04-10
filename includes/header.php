@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo isset($pageTitle) ? e($pageTitle) . ' - ' : ''; ?>Hydrothermal Vent Database</title>
     <!-- <link rel="stylesheet" href="css/reset.css"> -->
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/assignment_webtech/css/style.css">
     <!-- Students: Add your CSS stylesheet link here -->
 </head>
 <body>
