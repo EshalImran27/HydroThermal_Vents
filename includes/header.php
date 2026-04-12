@@ -1,3 +1,4 @@
+<?php require_once 'config.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +23,9 @@
                 <li><a href="map.php">Map</a></li>
                 <li><a href="contact.php">Contact</a></li>
             </ul>
-            <button class="login-btn">Login</button>
+            <div class="login-container">
+                <button class="login-btn">Login</button>
+            </div>
         </nav>
     </header>
     <main>

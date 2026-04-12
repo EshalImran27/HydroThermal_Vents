@@ -7,7 +7,7 @@
  */
 require_once 'includes/db.php';
 
-$pageTitle = 'All Vents';
+$pageTitle = 'Hydrothermal Vents';
 
 // Fetch all vents from the database
 $pdo = getDbConnection();

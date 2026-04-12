@@ -1,6 +1,19 @@
-    </main>
-    <footer>
-        <p>SET08101 Web Technologies Coursework</p>
+
+    <footer class="site-footer">
+        <div class="footer-left">
+        <p>&copy; <?php echo date('Y'); ?> Hydrothermal Vent Database. All rights reserved.</p>
+        <p>Created by <em>Eshal Imran-40735351</em></p>
+        </div>
+
+        <div class="footer-middle">
+            <a href="contact.php">Contact Us</a>
+            <a href="privacy.php">Privacy Policy</a>
+        </div>
+
+        <div class="footer-right">
+            <p>last updated: April 2026</p>
+            <p>SET08101 Web Technologies Coursework</p>
+        </div>
     </footer>
     <!-- Students: Add your JavaScript files here -->
 </body>
