@@ -51,10 +51,10 @@ INSERT INTO vents (name, location, type, depth_metres, discovery_year) VALUES
 
 -- Manus Basin fauna (vent_id = 1)
 INSERT INTO fauna (vent_id, name, scientific_name, description, image_url) VALUES
-(1, 'Manus Hairy Snail', 'Alviniconcha hessleri', 'Large gastropod with distinctive hairy periostracum housing chemosynthetic bacteria. Grows up to 6cm and forms dense aggregations near vent openings.', 'images/placeholder.svg'),
-(1, 'Manus Vent Mussel', 'Bathymodiolus manusensis', 'Deep-sea mussel hosting symbiotic bacteria in its gills. Forms extensive beds around hydrothermal vents.', 'images/placeholder.svg'),
-(1, 'Manus Vent Crab', 'Austinograea alayseae', 'White blind crab adapted to vent environments. Feeds on bacterial mats and small invertebrates.', 'images/placeholder.svg'),
-(1, 'Manus Limpet', 'Olgaconcha tufari', 'Small gastropod living on hard substrates near vents. Grazes on bacterial films.', 'images/placeholder.svg');
+(1, 'Manus Hairy Snail', 'Alviniconcha hessleri', 'Large gastropod with distinctive hairy periostracum housing chemosynthetic bacteria. Grows up to 6cm and forms dense aggregations near vent openings.', 'images/Map.png'),
+(1, 'Manus Vent Mussel', 'Bathymodiolus manusensis', 'Deep-sea mussel hosting symbiotic bacteria in its gills. Forms extensive beds around hydrothermal vents.', 'images/Manus_Vent_Mussel.jpg'),
+(1, 'Manus Vent Crab', 'Austinograea alayseae', 'White blind crab adapted to vent environments. Feeds on bacterial mats and small invertebrates.', 'images/Manus_Vent_Crab.jpg'),
+(1, 'Manus Limpet', 'Olgaconcha tufari', 'Small gastropod living on hard substrates near vents. Grazes on bacterial films.', 'images/Manus_Limpet.jpg');
 
 -- Lau Basin fauna (vent_id = 2)
 INSERT INTO fauna (vent_id, name, scientific_name, description, image_url) VALUES
