@@ -5,7 +5,6 @@
  *
  * SET08101 Web Technologies Coursework Starter Code
  */
-
 require_once 'includes/db.php';
 
 // Validate the vent ID parameter
@@ -29,7 +28,6 @@ if (!$vent) {
 }
 
 $pageTitle = $vent['name'];
-
 require_once 'includes/header.php';
 ?>
 
@@ -50,5 +48,7 @@ require_once 'includes/header.php';
     <dt>Discovery Year</dt>
     <dd><?php echo e($vent['discovery_year']); ?></dd>
 </dl>
+
+
 
 <?php require_once 'includes/footer.php'; ?>
