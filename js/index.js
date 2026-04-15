@@ -7,6 +7,26 @@ const activeFiltersSpan = document.getElementById('active-filters');
 filterButton.addEventListener('click', () => {
     filters.classList.toggle('is-open');
 });
+applyFiltersButton.addEventListener('click', () => {
+    const location = document.getElementById('location').querySelector('.selected').innerText;
+    const type = document.getElementById('type').querySelector('.selected').innerText;
+    const depth = document.getElementById('depth').querySelector('.selected').innerText;
+    const discoveryYear = document.getElementById('discovery-year').querySelector('.selected').innerText;
+
+    const params = new URLSearchParams();
+    if (location !== 'All Locations') params.append('location', location);
+    if (type !== 'All Types') params.append('type', type);
+    if (depth !== 'All Depths') params.append('depth', depth);
+    if (discoveryYear !== 'All Years') params.append('discovery_year', discoveryYear);
+
+    document.querySelector('.filters').classList.remove('is-open');
+    window.location.href = `index.html?${params.toString()}`;
+    activeFiltersSpan.textContent = 'Filters applied';
+});
+clearFiltersButton.addEventListener('click', () => {
+    filters.classList.remove('is-open');
+    activeFiltersSpan.textContent = 'No filters applied';
+});
 dropdowns.forEach(dropdown => {
     const select = dropdown.querySelector('.select');
     const caret = dropdown.querySelector('.caret');

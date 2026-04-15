@@ -98,7 +98,7 @@ form.addEventListener('submit', async (e) => {
             alert('Your message has been sent successfully!');
             form.reset();
         } else {
-            alert('There was an error sending your message. Please try again later server error: ' + result.error);
+            alert('There was an error sending your message. Please try again later server error: ');
         }
     } catch (error) {
         alert('There was an error sending your message. Please try again later.');
