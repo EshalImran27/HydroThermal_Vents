@@ -5,7 +5,7 @@ require_once 'includes/header.php';
 <main class="contact-page">
     <h2>Contact Us</h2>
     <p>If you have any questions, feedback, or would like to contribute to our Hydrothermal Vent Database, please feel free to reach out to us using the contact form below.</p>
-    <form class="contact-form">
+    <form class="contact-form" action="contact_handler.php" method="POST">
         <div class="form-row">
             <div class="form-group">
                 <input type="text" id="name" name="name" required minlength="2" >
@@ -22,8 +22,7 @@ require_once 'includes/header.php';
         </div>
         <div class="form-row">
             <div class="form-group">
-                <input type="tel" id="phone" name="phone" required pattern="^\
-                +?[0-9\s\-]{7,15}$">
+                <input type="tel" id="phone" name="phone" required pattern="^\+?[0-9\s\-]{7,15}$">
                 <label for="phone">Phone Number:</label>
                 <span class="underline"></span>
                 <span class="error-message" id="phone-error"></span>

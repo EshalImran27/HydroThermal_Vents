@@ -1,4 +1,4 @@
-const feilds = {
+const fields = {
     name: {
         input: document.getElementById('name'),
         error: document.getElementById('first-name-error'),
@@ -58,9 +58,9 @@ function clearError(field) {
     field.error.textContent = '';
     field.input.style.borderColor = '';
 }
-Object.values(feilds).forEach(field => {
+Object.values(fields).forEach(field => {
     field.input.addEventListener('input', () => {
-        const errorMessage = field.validate(field.input.value);
+        const errorMessage = field.validate(field.input.value.trim());
         if (errorMessage) {
             showError(field, errorMessage);
         } else {
@@ -68,3 +68,40 @@ Object.values(feilds).forEach(field => {
         }
     });
 });
+
+const form = document.querySelector('.contact-form');
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    let isValid = true;
+    Object.values(fields).forEach(field => {
+        const errorMessage = field.validate(field.input.value.trim());
+        if (errorMessage) {
+            showError(field, errorMessage);
+            isValid = false;
+        } else {
+            clearError(field);
+        }
+    });
+    if (!isValid) return;
+
+    const formData = new FormData(form);
+    try{
+        const response =await fetch('contact_handler.php', {
+            method: 'POST',
+            body: formData
+        });
+        const rawtext = await response.text();
+        console.log("server response:", rawtext);
+        const result = JSON.parse(rawtext);
+        //const result = await response.json();
+        if(result.success){
+            alert('Your message has been sent successfully!');
+            form.reset();
+        } else {
+            alert('There was an error sending your message. Please try again later server error: ' + result.error);
+        }
+    } catch (error) {
+        alert('There was an error sending your message. Please try again later.');
+    }   
+});
+
