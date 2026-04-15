@@ -7,7 +7,7 @@
 
         <div class="footer-middle">
             <a href="contact.php">Contact Us</a>
-            <a href="privacy.php">Privacy Policy</a>
+            <a href="references.php">References</a>
         </div>
 
         <div class="footer-right">
