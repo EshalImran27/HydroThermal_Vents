@@ -18,7 +18,7 @@
             <div class="logo">HydroCore</div>
             <ul class="nav-links">
                 <li><a href="index.php">Home</a></li>
-                <li><a href="vent.php">Vents</a></li>
+                <li><a href="all_vents.php">Vents</a></li>
                 <li><a href="fauna.php">Fauna</a></li>
                 <li><a href="map.php">Map</a></li>
                 <li><a href="contact.php">Contact</a></li>

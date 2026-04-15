@@ -33,9 +33,9 @@ require_once 'includes/header.php';
 
 <p><a href="index.php">&larr; Back to all vents</a></p>
 
-<h2><?php echo e($vent['name']); ?></h2>
+<h2 class="vent-detail-heading"><?php echo e($vent['name']); ?></h2>
 
-<dl>
+<dl class="vent-details">
     <dt>Location</dt>
     <dd><?php echo e($vent['location']); ?></dd>
 
@@ -48,6 +48,33 @@ require_once 'includes/header.php';
     <dt>Discovery Year</dt>
     <dd><?php echo e($vent['discovery_year']); ?></dd>
 </dl>
+
+<h3 class="vent-detail-heading">Associated Fauna</h3>
+<?php
+$stmt = $pdo->prepare('SELECT name, scientific_name, description, image_url FROM fauna WHERE vent_id = ?');
+$stmt->execute([$ventId]);
+$fauna = $stmt->fetchAll();
+if (empty($fauna)) {
+    echo '<p class="no-fauna">No fauna associated with this vent.</p>';
+} else {
+    echo '<div class="fauna-grid">';
+    foreach ($fauna as $animal) {
+        echo '<div class="fauna-card">';
+        if (!empty($animal['image_url'])) {
+            echo '<div class="fauna-image">';
+            echo '<img src="' . e($animal['image_url']) . '" alt="' . e($animal['name']) . '" width="100">';
+            echo '</div>';
+        }
+        echo '<div class="fauna-info">';
+        echo '<h4>' . e($animal['name']) . '</h4>';
+        echo '<span class="scientific-name">' . e($animal['scientific_name']) . '</span>';
+        echo '<p>' . e($animal['description']) . '</p>';
+        echo '</div>';
+        echo '</div>';
+    }
+    echo '</div>';
+}
+?>
 
 
 

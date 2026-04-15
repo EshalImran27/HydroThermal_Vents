@@ -16,16 +16,16 @@ $pageTitle = 'References';
     <li><a href="https://www.marinespecies.org/aphia.php?p=taxdetails&id=107001">Lau Vent Shrimp</a></li>
     <li><a href="https://en.wikipedia.org/wiki/Lamellibrachia">Lau Tubeworm</a></li>
     <li><a href="https://www.researchgate.net/figure/Bathymodiolus-brevior-a-Mussel-beds-at-Mussel-Hill-Fiji-Basin-Note-the-occasional_fig2_229920444">North Fiji Mussel</a></li>
-    <li><a href="">Fiji Squat Lobster</a></li>
-    <li><a href="">Fiji Polynoid Worm</a></li>
+    <li><a href="https://commons.wikimedia.org/wiki/Category:Munidopsis_starmer">Fiji Squat Lobster</a></li>
+    <li><a href="https://www.researchgate.net/figure/Polynoid-scale-worms-Branchinotogluma-sezonzaci-on-a-smoker-wall-in-the-aBe-vent-field_fig2_259624522">Fiji Polynoid Worm</a></li>
     <li><a href="">Mariana Vent Snail</a></li>
     <li><a href="">Mariana Hesionid Worm</a></li>
     <li><a href="">Mariana Vent Shrimp</a></li>
     <li><a href="">Mariana Sea Anemone</a></li>
-    <li><a href="">Eifuku Snail</a></li>
-    <li><a href="">Arc Vent Barnacle</a></li>
-    <li><a href="">Okinawa Hairy Snail</a></li>
-    <li><a href="">Okinawa Crab</a></li>
-    <li><a href="">Okinawa Vent Limpet</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Provanna">Eifuku Snail</a></li>
+    <li><a href="https://www.researchgate.net/figure/Neolepas-marisindica-sp-nov-a-Holotype-from-Kairei-vent-field-on-the-CIR-NSMT-Cr_fig3_324586595">Arc Vent Barnacle</a></li>
+    <li><a href="https://www.mbari.org/wp-content/uploads/2015/08/alviniconcha-e1471561016205-450x221.jpg">Okinawa Hairy Snail</a></li>
+    <li><a href="https://www.researchgate.net/figure/Shinkaia-crosnieri-Baba-and-Williams1998-NIO1013-22-Female-PCL-2281mm-CW-197mm_fig2_362094347">Okinawa Crab</a></li>
+    <li><a href="https://www.whoi.edu/science/B/vent-larval-id/Lepetodrilussp.htm">Okinawa Vent Limpet</a></li>
 </ul>
 <?php require_once 'includes/footer.php'; ?>
