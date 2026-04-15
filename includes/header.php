@@ -29,3 +29,9 @@
         </nav>
     </header>
     <main>
+    <script>
+        const loginBtn = document.querySelector('.login-btn');
+        loginBtn.addEventListener('click', () => {
+            window.location.href = 'login.php';
+        });
+    </script>

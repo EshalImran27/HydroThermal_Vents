@@ -14,6 +14,7 @@ $pdo = getDbConnection();
 $location = trim($_GET['location'] ?? '');
 $type = trim($_GET['type'] ?? '');
 $depth = trim($_GET['depth'] ?? '');
+
 $discoveryYear = trim($_GET['discovery_year'] ?? '');
 $mindepth = filter_input(INPUT_GET, 'mindepth', FILTER_VALIDATE_INT);
 $maxdepth = filter_input(INPUT_GET, 'maxdepth', FILTER_VALIDATE_INT);
@@ -69,6 +70,8 @@ $vents = $stmt->fetchAll();
 $stmt = $pdo->query('SELECT DISTINCT type FROM vents ORDER BY type');
 $types = $stmt->fetchAll(PDO::FETCH_COLUMN);
 
+$displayTypes = $pdo ->query('SELECT DISTINCT type FROM vents ORDER BY type');
+$Types = $displayTypes->fetchAll(PDO::FETCH_COLUMN);
 
 require_once 'includes/header.php';
 ?>
@@ -85,9 +88,9 @@ require_once 'includes/header.php';
     <button class="filter-button">Filter by Type</button>
     <span id="active-filters"></span>
 </div>
-<div class="filters">
+<form id="vent-filter-form" class="filters" method="get" action="index.php">
     <div class="dropdown">
-        <p>Filter by Location</p>
+        <p><strong>Filter by Location</strong></p>
         <div class="select">
             <span class="selected">Pacific Ocean</span>
             <div class="caret"></div>
@@ -101,27 +104,30 @@ require_once 'includes/header.php';
         </ul>
     </div>
     <div class="dropdown">
-        <p>Filter by Type</p>
+        <p><strong>Filter by Type</strong></p>
         <div class="select">
             <span class="selected">Back-arc Basin</span>
             <div class="caret"></div>
         </div>
         <ul class="menu">
             <li>All</li>
-            <li class="active">Back-arc Basin</li>
+            <!-- <li class="active">Back-arc Basin</li>
             <li>Mid-ocean Ridge</li>
             <li>Subduction Zone</li>
-            <li>Volcanic Arc</li>
+            <li>Volcanic Arc</li> -->
+            <?php foreach ($Types as $type): ?>
+                <li<?php if ($type === 'Back-arc Basin') echo ' class="active"'; ?>><?php echo e($type); ?></li>
+            <?php endforeach; ?>
         </ul>
     </div>
     <div class="sliders">
         <div class="slider-group">
-            <label for="depth-slider">Depth (m):</label>
+            <label for="depth-slider"><strong>Depth (m):</strong></label>
             <input type="range" id="depth-slider" name="depth" min="0" max="5000" step="100">
             <span id="depth-value">0 - 5000 m</span>
         </div>
         <div class="slider-group">
-            <label for="discovery-year-slider">Discovery Year:</label>
+            <label for="discovery-year-slider"><strong>Discovery Year:</strong></label>
             <input type="range" id="discovery-year-slider" name="discovery_year" min="1977" max="<?php echo date('Y'); ?>" step="1">
             <span id="discovery-year-value">1977 - <?php echo date('Y'); ?></span>
         </div>
@@ -138,9 +144,7 @@ require_once 'includes/header.php';
     <?php foreach ($vents as $vent): ?>
         <div class="card">
             <h3><?php echo e($vent['name']); ?></h3>
-            <!-- <p><strong>Location:</strong> <?php echo e($vent['location']); ?></p>
-            <p><strong>Type:</strong> <?php echo e($vent['type']); ?></p>
-            <p><strong>Depth:</strong> <?php echo e($vent['depth_metres']); ?> m</p> -->
+            <span class="card-location" style="display: none;"><?php echo e($vent['location']); ?></span>
             <a class="card-link" href="vent.php?id=<?php echo e($vent['id']); ?>">View Details</a>
         </div>
     <?php endforeach; ?>
