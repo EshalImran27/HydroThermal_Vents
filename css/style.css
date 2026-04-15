@@ -6,7 +6,7 @@
 body{
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #5d8cd2;
+    background-color:#0A192F;
     color: #333;
 }
 
@@ -469,12 +469,6 @@ body{
     gap: 10px;
     margin: 20px 0;
 }
-.filter-button-container{
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    gap: 10px;
-}
 .filter-button{
     background-color: #0ADADC;
     color: #0A192F;
@@ -495,8 +489,10 @@ body{
 }
 .filters{
     align-items: center;
-    display: flex;
-    position: static;
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 100;
     background-color: #10294e;
     padding: 20px;
@@ -608,7 +604,6 @@ body{
     font-size: 14px;
 }
 .slider-group input[type="range"] {
-    appearance: none;
     -webkit-appearance: none;
     height: 10px;
     border-radius: 5px;
