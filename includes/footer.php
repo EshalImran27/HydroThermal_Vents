@@ -1,4 +1,7 @@
-
+<!-- Footer -->
+<!-- The footer contains copyright information and links to important pages for example the reference page. -->
+<!-- it also contains the last updated information -->
+<!-- the last updated information is hard coded right now, future versions may include dynamic updates -->
     <footer class="site-footer">
         <div class="footer-left">
         <p>&copy; <?php echo date('Y'); ?> Hydrothermal Vent Database. All rights reserved.</p>
@@ -15,6 +18,8 @@
             <p>SET08101 Web Technologies Coursework</p>
         </div>
     </footer>
-    <!-- Students: Add your JavaScript files here -->
+    <script src="js/index.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/fauna.js"></script>
 </body>
 </html>
