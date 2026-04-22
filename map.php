@@ -11,10 +11,10 @@ require_once 'includes/header.php';
   </section>
   <section class="map-image">
     <figure>
-      <img src ="images/map.png" alt="Map of Hydrothermal Vents" id="vent-map">
+      <img src ="images/Hydrothermal_vents_map.png" alt="Map of Hydrothermal Vents" id="vent-map">
       <figcaption style="color: #a08160">
         Map of Hydrothermal Vents (Data from Hydrothermal Vent Database)
-        Base map image: <cite>Blue Marble Next Generation, NASA Earth Observatory</cite>
+        Base map image: <cite>Wikimedia Commons</cite>
       </figcaption>
     </figure>
   </section>

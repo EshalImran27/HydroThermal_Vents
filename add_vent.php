@@ -52,11 +52,11 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
         <label for="type">Type:</label>
     </div>
     <div class="form-group">
-        <input type="number" id="depth" name="depth" required min="0" placeholder=" ">
+        <input type="number" id="depth" name="depth" required min="0" max="5000" placeholder=" ">
         <label for="depth">Depth (metres):</label>
     </div>
     <div class="form-group">
-        <input type="number" id="discovery_year" name="discovery_year" required min="1900" max="<?php echo date('Y'); ?>" placeholder=" ">
+        <input type="number" id="discovery_year" name="discovery_year" required min="1977" max="<?php echo date('Y'); ?>" placeholder=" ">
         <label for="discovery_year">Discovery Year:</label>
     </div>
     <?php if(!empty($errorMessage)): ?>
