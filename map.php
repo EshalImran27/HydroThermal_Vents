@@ -10,9 +10,13 @@ require_once 'includes/header.php';
     <p>Use this map to explore where hydrothermal vents are located and how they are distributed in relation to tectonic plate boundaries and oceanic features.</p>
   </section>
   <section class="map-image">
-    <img src="images/map.png" alt="Global Map of Hydrothermal Vents">
-    <p id="image-caption">Map data from NOAA.</p>
+    <figure>
+      <img src ="images/map.png" alt="Map of Hydrothermal Vents" id="vent-map">
+      <figcaption style="color: #a08160">
+        Map of Hydrothermal Vents (Data from Hydrothermal Vent Database)
+        Base map image: <cite>Blue Marble Next Generation, NASA Earth Observatory</cite>
+      </figcaption>
+    </figure>
   </section>
 </main>
-
 <?php require_once 'includes/footer.php'; ?>
