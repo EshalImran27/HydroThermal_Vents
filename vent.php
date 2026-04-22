@@ -74,9 +74,9 @@ require_once 'includes/header.php';
 </dl>
 
 <h3 class="vent-detail-heading">Associated Fauna</h3>
-// wrap the url in the safeImageUrl function to ensure that only valid and safe image URLs are used when displaying fauna images on the vent detail page.
-// plus also make sure the url typed passes the htmlspecialchars function to prevent XSS attacks by escaping any special characters in the URL that could be used to inject malicious code into the page.
-// using load="lazy" attribute to defer the loading of images until they are needed, which can improve page load times and overall performance, especially if there are many images on the page.
+<!-- wrap the url in the safeImageUrl function to ensure that only valid and safe image URLs are used when displaying fauna images on the vent detail page.
+plus also make sure the url typed passes the htmlspecialchars function to prevent XSS attacks by escaping any special characters in the URL that could be used to inject malicious code into the page.
+ using load="lazy" attribute to defer the loading of images until they are needed, which can improve page load times and overall performance, especially if there are many images on the page. -->
 <?php
 $stmt = $pdo->prepare('SELECT name, scientific_name, description, image_url FROM fauna WHERE vent_id = ?');
 $stmt->execute([$ventId]);
