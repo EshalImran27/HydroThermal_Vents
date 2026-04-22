@@ -2,6 +2,13 @@
 $pageTitle = 'Contact Us';
 require_once 'includes/header.php';
 ?>
+<!--  The contact.php file provides a contact form for users to reach out to the website administrators with 
+questions, feedback, or contributions related to the Hydrothermal Vent Database.
+ The form includes fields for the user's first name, last name, phone number, email, and message. Each 
+field has validation requirements to ensure that the submitted data is complete and properly formatted.
+the form is of type POST, so that the data is send only when the form is submitted in this way it is more secure
+and data is not exposed in the URL, and it allows for a larger amount of data to be sent compared to GET method,
+which is important for the message field where users may want to provide detailed information or feedback. -->
 <main class="contact-page">
     <h2>Contact Us</h2>
     <p>If you have any questions, feedback, or would like to contribute to our Hydrothermal Vent Database, please feel free to reach out to us using the contact form below.</p>

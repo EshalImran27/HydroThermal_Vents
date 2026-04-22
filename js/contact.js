@@ -90,15 +90,18 @@ form.addEventListener('submit', async (e) => {
             method: 'POST',
             body: formData
         });
+        // first get the raw text from the server and display it such that if there is an error 
+        // we dont just crash the system but we can see the error message from the server and debug it, 
+        // then we parse the text as json to get the result object and check if the success property is true
+        // or false to show the appropriate message to the user.
         const rawtext = await response.text();
         console.log("server response:", rawtext);
         const result = JSON.parse(rawtext);
-        //const result = await response.json();
         if(result.success){
             alert('Your message has been sent successfully!');
             form.reset();
         } else {
-            alert('There was an error sending your message. Please try again later server error: ');
+            alert('There was an error sending your message. Please try again later.');
         }
     } catch (error) {
         alert('There was an error sending your message. Please try again later.');
