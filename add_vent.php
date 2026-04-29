@@ -11,9 +11,9 @@ $pdo = getDbConnection();
 // does not expose the data in the URL and has a larger capacity for sending data, allowing for more complex
 //  and detailed information to be submitted through the form. 
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $name = trim($_POST['name']);
-    $location = trim($_POST['location']);
-    $type = trim($_POST['type']);
+    $name = e(trim($_POST['name']));
+    $location = e(trim($_POST['location']));
+    $type = e(trim($_POST['type']));
     $depth = filter_input(INPUT_POST, 'depth', FILTER_VALIDATE_INT);
     $discovery_year = filter_input(INPUT_POST, 'discovery_year', FILTER_VALIDATE_INT);
 

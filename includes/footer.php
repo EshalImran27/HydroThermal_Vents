@@ -20,6 +20,6 @@
     </footer>
     <script src="js/index.js"></script>
     <script src="js/contact.js"></script>
-    <script src="js/fauna.js"></script>
+    <script src="js/login.js"></script>
 </body>
 </html>

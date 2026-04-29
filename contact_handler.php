@@ -1,10 +1,10 @@
-<!--  the backend script for contact form submission which instead of refreshing the page and showing success or error
-message, it returns a JSON response that can be handled by frontend Javascript to provode a dynamic user
-experience without the need for page reloads. this allows for a more seamless and interactive user interface, as users can receive immediate feedback on their form submission without navigating away from the contact page.
-this file is responsible for handling the contact form submission. it takes the data submitted validates it and sanitises it to make sure there is not malicious code
-in the data and then stores it into the database. it also returns a JSON response  to indicate whether the 
-submission was successful or if there were any errors durin the submission process. -->
 <?php
+// the backend script for contact form submission which instead of refreshing the page and showing success or error
+// message, it returns a JSON response that can be handled by frontend Javascript to provode a dynamic user
+// experience without the need for page reloads. this allows for a more seamless and interactive user interface, as users can receive immediate feedback on their form submission without navigating away from the contact page.
+// this file is responsible for handling the contact form submission. it takes the data submitted validates it and sanitises it to make sure there is not malicious code
+// in the data and then stores it into the database. it also returns a JSON response  to indicate whether the 
+// submission was successful or if there were any errors durin the submission process.
 require_once __DIR__ . '/includes/db.php';
 // header to lets the computer know that the data is in json format for javascript not a html page
 header('Content-Type: application/json');

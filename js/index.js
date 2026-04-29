@@ -12,7 +12,7 @@ const yearValue = document. getElementById('discovery-year-value');
 // only display the filter options when the filter button is clicked,
 // and hide them when the button is clicked again or when the user clicks outside the filter area.
 filterButton?.addEventListener('click', () => {
-    filters.classList.toggle('is-open');
+    filters?.classList.toggle('is-open');
 });
 // open each dropdown menu when the user clicks on it
 dropdowns.forEach(dropdown => {
@@ -42,8 +42,8 @@ dropdowns.forEach(dropdown => {
 });
 // the filter options will be hidden when the user clicks outside the filter area,
 window.addEventListener('click', (e) => {
-    if (!filters.contains(e.target) && !filterButton.contains(e.target)) {
-        filters.classList.remove('is-open');
+    if (!filters?.contains(e.target) && !filterButton?.contains(e.target)) {
+        filters?.classList.remove('is-open');
     }
 });
 
@@ -67,7 +67,7 @@ typeDropdown?.querySelectorAll('li').forEach(item => {
  // the search functionality is implemented by adding an event listener to the submit event of the search form,
  // it filters the vent cards based on the search query and displays a message if no vents are found matching the search criteria.
 
-document.querySelector('.search-form').addEventListener('submit', function(e) {
+document.querySelector('.search-form')?.addEventListener('submit', function(e) {
     e.preventDefault();
     const query = document.querySelector('input[name="q"]').value.trim().toLowerCase();
     const ventCards = document.querySelectorAll('.card');
@@ -99,7 +99,7 @@ document.querySelector('.search-form').addEventListener('submit', function(e) {
 // the filter functionality is implemented by adding an event listener to the submit event of the filter form,
 // it filters the vent cards based on the selected filter options and displays a message if no vents are found matching 
 // the filter criteria.
-document.querySelector('#vent-filter-form').addEventListener("submit", function(e){
+document.querySelector('#vent-filter-form')?.addEventListener("submit", function(e){
     e.preventDefault();
     const maxYear=parseInt(yearSlider.value);
     const minYear=1977;
@@ -138,11 +138,11 @@ document.querySelector('#vent-filter-form').addEventListener("submit", function(
     } else if (emptyMessage) {
         emptyMessage.style.display = 'none';
     }
-    filters.classList.toggle('is-open');
+    filters?.classList.toggle('is-open');
 
 });
 
-document.querySelector('#vent-filter-form').addEventListener('reset', function() {
+document.querySelector('#vent-filter-form')?.addEventListener('reset', function() {
     depthSlider.value = 5000;
     yearSlider.value = new Date().getFullYear();
     depthValue.textContent = `0 - ${depthSlider.value} m`;
@@ -153,6 +153,6 @@ document.querySelector('#vent-filter-form').addEventListener('reset', function()
         emptyMessage.style.display = 'none';
     }
     activeFiltersSpan.textContent = '';
-    filters.classList.toggle('is-open');
+    filters?.classList.toggle('is-open');
 });
 

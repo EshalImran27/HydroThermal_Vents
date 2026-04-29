@@ -49,7 +49,6 @@ which is important for the message field where users may want to provide detaile
         </div>
         <button type="submit">Send Message</button>
     </form>
-    <script src="js/contact.js"></script>
 </main>
 
 <?php require_once 'includes/footer.php'; ?>

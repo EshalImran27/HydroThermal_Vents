@@ -53,6 +53,5 @@ $pdo = getDbConnection();
             </div>
         </div>
     </div>
-    <script src="js/login.js"></script>
 </main>
 <?php require_once 'includes/footer.php'; ?>

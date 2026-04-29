@@ -59,7 +59,7 @@ function clearError(field) {
     field.input.style.borderColor = '';
 }
 Object.values(fields).forEach(field => {
-    field.input.addEventListener('input', () => {
+    field.input?.addEventListener('input', () => {
         const errorMessage = field.validate(field.input.value.trim());
         if (errorMessage) {
             showError(field, errorMessage);
@@ -70,7 +70,7 @@ Object.values(fields).forEach(field => {
 });
 
 const form = document.querySelector('.contact-form');
-form.addEventListener('submit', async (e) => {
+form?.addEventListener('submit', async (e) => {
     e.preventDefault();
     let isValid = true;
     Object.values(fields).forEach(field => {
